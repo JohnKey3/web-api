@@ -33,7 +33,7 @@ namespace web_api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            string con = "Data Source=DESKTOP-DL6A5QB\\SQLEXPRESS;Initial Catalog=Govorov1;Integrated Security=True";
+            string con = "Data Source=DESKTOP-1B8H9A7\\JIJA;Initial Catalog=spcapi;Integrated Security=True;";
             services.AddScoped<TovarInterface, TovarRepository>();
             services.AddScoped<ProdajaInterface, ProdajaRepository>();
             services.AddScoped<SotrydnikInterface, SotrydnikRepository>();

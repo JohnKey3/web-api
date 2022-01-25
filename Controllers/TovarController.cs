@@ -22,29 +22,29 @@ namespace web_api.Controllers
     {
         private TovarInterface _TovarRepository;
         public TovarController(TovarInterface TovarRepository) { _TovarRepository = TovarRepository; }
-        [HttpGet]
-        [Route("get")]
-        public Tovar get() 
-            => _TovarRepository.select().FirstOrDefault();
 
         [HttpGet]
-        [Route("select")]
         public IEnumerable<Tovar> select()
             => _TovarRepository.select();
 
-        [HttpPost]
+
+        [HttpGet("{id}")]
+        public Tovar getbyid(int id)
+            => _TovarRepository.getbyid(id);
+
+        [HttpPut]
         [Route("update")]
-        public void update(Tovar tovar)
+        public void update(int id, [FromBody]Tovar tovar)
             => _TovarRepository.update(tovar);
 
-        [HttpPost]
-        [Route("delete")]
+        [HttpDelete("{id}")]
         public void delete(int id)
             => _TovarRepository.delete(id);
+        
 
         [HttpPost]
         [Route("insert")]
-        public void insert(Tovar tovar)
+        public void insert([FromBody] Tovar tovar)
             => _TovarRepository.insert(tovar);
     }
 }

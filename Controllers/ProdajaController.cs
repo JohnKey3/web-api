@@ -17,7 +17,7 @@ using web_api.Interfaces;
 namespace web_api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/Prodaja")]
     public class ProdajaController : ControllerBase
     {
         private ProdajaInterface _ProdajaRepository;

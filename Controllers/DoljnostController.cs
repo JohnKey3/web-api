@@ -17,7 +17,7 @@ using web_api.Interfaces;
 namespace web_api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/Doljnost")]
     public class DoljnostController : ControllerBase
     {
         private DoljnostInterface _DoljnostRepository;
